@@ -1,0 +1,189 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+    color: #0056b3;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+textarea#jsonInput {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95em;
+    box-sizing: border-box;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#controls-section button,
+#controls-section select {
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+#controls-section button:hover,
+#controls-section select:hover {
+    background-color: #0056b3;
+}
+
+#controls-section label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#formattedOutputContainer,
+#treeViewContainer {
+    margin-top: 15px;
+}
+
+pre#formattedJsonOutput {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    white-space: pre-wrap;       /* Allow wrapping */
+    word-wrap: break-word;       /* Break long words/strings */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tree-view {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    padding-left: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.tree-view ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.tree-view li {
+    position: relative;
+}
+
+.tree-view .toggler {
+    cursor: pointer;
+    margin-right: 5px;
+    user-select: none; /* Prevent text selection on click */
+}
+
+.tree-view .toggler::before {
+    content: "\25B6"; /* Right-pointing triangle (collapsed) */
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
+}
+
+.tree-view .toggler.open::before {
+    transform: rotate(90deg); /* Down-pointing triangle (expanded) */
+}
+
+.tree-view .hidden {
+    display: none;
+}
+
+.tree-view .key {
+    color: #990055; /* Dark magenta for keys */
+    font-weight: bold;
+}
+
+.tree-view .string {
+    color: #2a00ff; /* Blue for strings */
+}
+
+.tree-view .number {
+    color: #1c00cf; /* Dark blue for numbers */
+}
+
+.tree-view .boolean {
+    color: #881391; /* Purple for booleans */
+}
+
+.tree-view .null {
+    color: #777; /* Gray for null */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9em;
+    color: #666;
+}
